@@ -1,0 +1,115 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+  [
+    "name" : "Email",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+  [
+    "name" : "Log",
+    "parameters" : [
+      "Message" : new StringDataType()
+    ],
+    "displayName" : "Log",
+    "icon" : "defaultlogicon.gif"
+  ],
+
+  [
+    "name" : "WebService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+         "Namespace" : new StringDataType(),
+         "Interface" : new StringDataType(),
+         "Operation" : new StringDataType(),
+         "Parameter" : new StringDataType(),
+         "Mode" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "WS",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "Rest",
+    "parameters" : [
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        "ConnectTimeout" : new StringDataType(),
+        "ReadTimeout" : new StringDataType(),
+        "Username" : new StringDataType(),
+        "Password" : new StringDataType()
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "CustomService",
+    "parameters" : [
+        "Url" : new StringDataType(),
+        "Method" : new StringDataType(),
+        
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+    "displayName" : "custom Service",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "BarclayService",
+    "parameters" : [
+        "input" : new StringDataType(),
+        
+        
+    ],
+    "results" : [
+        "Result" : new ObjectDataType(),
+    ],
+   "category":"Barclay Service",
+    "displayName" : "barclay custom service",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+
+  [
+    "name" : "ShippingService",
+    "parameters" : [
+        "messageIn" : new ObjectDataType("com.healthcare.casemgt.Shipping"),
+        
+        
+    ],
+    "results" : [
+        "shipingStatus" : new StringDataType(),
+    ],
+   "category":"Healthcare CaseMgt",
+    "displayName" : "Shipping Service",
+    "icon" : "defaultservicenodeicon.png"
+  ],[
+    "name" : "TDbankEmail",
+    "parameters" : [
+      "From" : new StringDataType(),
+      "To" : new StringDataType(),
+      "Subject" : new StringDataType(),
+      "Body" : new StringDataType()
+    ],
+    "category":"TDBank Services",
+    "displayName" : "Email",
+    "icon" : "defaultemailicon.gif"
+  ],
+
+]

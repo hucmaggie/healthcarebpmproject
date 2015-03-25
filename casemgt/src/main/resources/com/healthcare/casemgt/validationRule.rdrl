@@ -1,0 +1,9 @@
+package com.healthcare.casemgt;
+
+import java.lang.Number;
+
+rule "validationRule"
+	dialect "mvel"
+	when
+	then
+end

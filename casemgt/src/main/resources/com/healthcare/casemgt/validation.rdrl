@@ -1,0 +1,16 @@
+package com.healthcare.casemgt;
+import com.healthcare.casemgt.Prescription;
+import com.healthcare.casemgt.CaseMgtContext;
+import com.healthcare.casemgt.PatientInfo;
+import java.lang.Number;
+
+rule "validation"
+	dialect "mvel"
+	ruleflow-group "validation"
+	when
+		mgtContext : CaseMgtContext( )
+		Prescription( patientInfo != null , patientInfo.symbtom == "Diabetes Insipidus" , patientInfo.age < 30 )
+	then
+		mgtContext.setApprovalReq( "Y" );
+		mgtContext.setApprverName( "Supervisor" );
+end

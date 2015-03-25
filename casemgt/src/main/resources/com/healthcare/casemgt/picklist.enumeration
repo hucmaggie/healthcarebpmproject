@@ -1,0 +1,5 @@
+'PatientInfo.age' : [20,30,40,50,60]
+'PatientInfo.symbtom' : ['Hypertension','Diabetes Insipidus','Myocardial Infection']
+'PatientInfo.type' : ['Heart Attack','Diabetes','Depression']
+'CaseMgtContext.approvalReq' : ['Y=Yes','N=No']
+'CaseMgtContext.apprverName' : ['Manager','Supervisor']
